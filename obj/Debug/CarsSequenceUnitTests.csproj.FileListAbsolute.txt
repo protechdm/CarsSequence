@@ -1,0 +1,8 @@
+C:\Development\CarsSequenceUnitTests\bin\Debug\CarsSequenceUnitTests.dll
+C:\Development\CarsSequenceUnitTests\bin\Debug\CarsSequenceUnitTests.pdb
+C:\Development\CarsSequenceUnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Development\CarsSequenceUnitTests\bin\Debug\nunit.framework.dll
+C:\Development\CarsSequenceUnitTests\bin\Debug\nunit.framework.xml
+C:\Development\CarsSequenceUnitTests\obj\Debug\CarsSequenceUnitTests.csprojResolveAssemblyReference.cache
+C:\Development\CarsSequenceUnitTests\obj\Debug\CarsSequenceUnitTests.dll
+C:\Development\CarsSequenceUnitTests\obj\Debug\CarsSequenceUnitTests.pdb
