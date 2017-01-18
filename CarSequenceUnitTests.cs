@@ -88,6 +88,11 @@ namespace CarsSequenceUnitTests
             Assert.AreEqual(3, CalculateLongestSequenceOfTwoCarColours(new[] { "Red", "Redd", "Blue", "Red", "Redd", "Blue", "Red", "Purple", "Red", "Redd" }));
         }
 
+        [Test]
+        public void when_longest_sequence_is_last_3_cars()
+        {
+            Assert.AreEqual(3, CalculateLongestSequenceOfTwoCarColours(new[] { "1", "2", "3", "2" }));
+        }
         /// <summary>
         /// Given a sequence of car colours, returns the length of longest streak containing just two colours.
         /// See read me for more information and examples.
@@ -138,15 +143,15 @@ namespace CarsSequenceUnitTests
                 return _sourceElementsCount;
             }
 
-            while (_startPos < _sourceElementsCount)
+            while (_startPos < (_sourceElementsCount-1))
             {
                 int count = _source.Skip(_startPos).TakeWhile(x => x == firstCarInSequenceColour || x == secondCarInSequenceColour).Count();
-                _startPos += count > 0 ? count : _sourceElementsCount;
+                _startPos += count > 0 ? count - 1 : _sourceElementsCount;
                 _result = Math.Max(_result, count);
-                if (_startPos < _sourceElementsCount)
+                if (_startPos < (_sourceElementsCount-1))
                 {
                     firstCarInSequenceColour = _source.Skip(_startPos).FirstOrDefault();
-                    secondCarInSequenceColour = _source.Skip(_startPos + 1).FirstOrDefault();
+                    secondCarInSequenceColour = _source.Skip(_startPos+1).FirstOrDefault();
                 }
             }
             return _result;
